@@ -79,24 +79,6 @@
         "enabled": true
     },
     {
-        "id": "9e283dcdfb8cc28e",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
         "id": "68fc86b5be455992",
         "type": "mqtt in",
         "z": "0b2ec5e1251b8152",
@@ -237,7 +219,7 @@
         "pinmode": 0,
         "client": "059905dfc4af367c",
         "x": 850,
-        "y": 240,
+        "y": 160,
         "wires": []
     },
     {
