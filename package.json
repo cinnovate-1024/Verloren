@@ -2,7 +2,9 @@
     "name": "Verloren",
     "description": "Verloren Logic Flow",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-blynk-iot": "1.0.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

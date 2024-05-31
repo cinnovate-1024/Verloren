@@ -1,1 +1,431 @@
-[]
+[
+    {
+        "id": "0b2ec5e1251b8152",
+        "type": "tab",
+        "label": "Verloren",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8b6c2f5c0d1c7add",
+        "type": "tab",
+        "label": "Sondela",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "059905dfc4af367c",
+        "type": "blynk-iot-client",
+        "name": "Verloren",
+        "path": "blynk.cloud",
+        "key": "s48eMqSL0OfC_2bc_heOST0tjkmcBQ53",
+        "tmpl": "TMPL2nbGdRffp",
+        "dbg_all": true,
+        "dbg_log": false,
+        "dbg_prop": false,
+        "dbg_sync": false,
+        "dbg_low": false,
+        "dbg_pins": "",
+        "multi_cmd": true,
+        "enabled": true
+    },
+    {
+        "id": "abd40e853e9c3498",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "102.211.206.252",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "2",
+        "birthRetain": "true",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bdc8336b819ab257",
+        "type": "blynk-iot-client",
+        "name": "Sondela",
+        "path": "blynk.cloud",
+        "key": "Gg52iM1qVKb1vudODUp2PbBAcgpxzQPr",
+        "tmpl": "TMPL2jGqNsDCd",
+        "dbg_all": true,
+        "dbg_log": false,
+        "dbg_prop": false,
+        "dbg_sync": false,
+        "dbg_low": false,
+        "dbg_pins": "",
+        "multi_cmd": false,
+        "enabled": true
+    },
+    {
+        "id": "9e283dcdfb8cc28e",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "68fc86b5be455992",
+        "type": "mqtt in",
+        "z": "0b2ec5e1251b8152",
+        "name": "",
+        "topic": "Verloren/M100_Report",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "abd40e853e9c3498",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "4e96f18f70b53d92",
+                "a8e49545df0ca242",
+                "8aa1cceb4535f98e",
+                "4b762a8761b9b13a"
+            ]
+        ]
+    },
+    {
+        "id": "4e96f18f70b53d92",
+        "type": "change",
+        "z": "0b2ec5e1251b8152",
+        "name": "AI1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.AI1",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "90b40e83b7481206"
+            ]
+        ]
+    },
+    {
+        "id": "a8e49545df0ca242",
+        "type": "change",
+        "z": "0b2ec5e1251b8152",
+        "name": "AI2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.AI2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "8df61ea81aced985"
+            ]
+        ]
+    },
+    {
+        "id": "8aa1cceb4535f98e",
+        "type": "change",
+        "z": "0b2ec5e1251b8152",
+        "name": "AI3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.AI3",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "310495aec6590057"
+            ]
+        ]
+    },
+    {
+        "id": "4b762a8761b9b13a",
+        "type": "change",
+        "z": "0b2ec5e1251b8152",
+        "name": "AI4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.AI4",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "12424bfec2f10b50"
+            ]
+        ]
+    },
+    {
+        "id": "90b40e83b7481206",
+        "type": "blynk-iot-out-write",
+        "z": "0b2ec5e1251b8152",
+        "name": "Cement Dam",
+        "pin": "1",
+        "pinmode": 0,
+        "client": "059905dfc4af367c",
+        "x": 850,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8df61ea81aced985",
+        "type": "blynk-iot-out-write",
+        "z": "0b2ec5e1251b8152",
+        "name": "Holding Tank 1",
+        "pin": "2",
+        "pinmode": 0,
+        "client": "059905dfc4af367c",
+        "x": 860,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "310495aec6590057",
+        "type": "blynk-iot-out-write",
+        "z": "0b2ec5e1251b8152",
+        "name": "Holding Tank 2",
+        "pin": "3",
+        "pinmode": 0,
+        "client": "059905dfc4af367c",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "12424bfec2f10b50",
+        "type": "blynk-iot-out-write",
+        "z": "0b2ec5e1251b8152",
+        "name": "Header Tank",
+        "pin": "4",
+        "pinmode": 0,
+        "client": "059905dfc4af367c",
+        "x": 850,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3a991fb6534a874a",
+        "type": "mqtt in",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "",
+        "topic": "sondela/temp/canteen/t1",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "abd40e853e9c3498",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "0c1134a9a26d77bb",
+                "51a428309af18d49"
+            ]
+        ]
+    },
+    {
+        "id": "0c1134a9a26d77bb",
+        "type": "blynk-iot-out-write",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "Ice",
+        "pin": "2",
+        "pinmode": 0,
+        "client": "bdc8336b819ab257",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a9596044cde73f6c",
+        "type": "mqtt in",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "",
+        "topic": "sondela/temp/canteen/t3",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "abd40e853e9c3498",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "b3c04a9b499032a0",
+                "51a428309af18d49"
+            ]
+        ]
+    },
+    {
+        "id": "4fa78c3e8c4ab615",
+        "type": "mqtt in",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "",
+        "topic": "sondela/temp/canteen/t2",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "abd40e853e9c3498",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "7125f9e8d8254568",
+                "51a428309af18d49"
+            ]
+        ]
+    },
+    {
+        "id": "b3c04a9b499032a0",
+        "type": "blynk-iot-out-write",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "Wine",
+        "pin": "3",
+        "pinmode": 0,
+        "client": "bdc8336b819ab257",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7125f9e8d8254568",
+        "type": "blynk-iot-out-write",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "Meat",
+        "pin": "1",
+        "pinmode": 0,
+        "client": "bdc8336b819ab257",
+        "x": 710,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c148c9efbbe09af5",
+        "type": "blynk-iot-out-write",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "Medical",
+        "pin": "0",
+        "pinmode": 0,
+        "client": "bdc8336b819ab257",
+        "x": 720,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0bc00b7caeaf0b69",
+        "type": "mqtt in",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "",
+        "topic": "sondela/temp/canteen/t0",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "abd40e853e9c3498",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "c148c9efbbe09af5",
+                "51a428309af18d49"
+            ]
+        ]
+    },
+    {
+        "id": "51a428309af18d49",
+        "type": "debug",
+        "z": "8b6c2f5c0d1c7add",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 760,
+        "wires": []
+    }
+]
